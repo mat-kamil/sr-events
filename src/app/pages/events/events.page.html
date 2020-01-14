@@ -1,1 +1,7 @@
-<p>events works!</p>
+<div class="header-section">
+  <h3>List of all events</h3>
+  <input type="text" (input)="onSearchChange($event?.target.value)"/>
+</div>
+<div class="body-section">
+  <component-events [searchTermInput]="searchTerm | async"></component-events>
+</div>

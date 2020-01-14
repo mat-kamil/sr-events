@@ -1,1 +1,10 @@
-<p>event works!</p>
+<div class="event" *ngIf="event"
+     [class.beers]="event.type==='BEERS'"
+     [class.cocktails]="event.type==='COCKTAILS'"
+     [class.coffees]="event.type==='COFFEES'"
+     [class.milkshakes]="event.type==='MILKSHAKES'"
+>
+  <h3>{{event.title}}</h3>
+  <img class="location" src="https://maps.googleapis.com/maps/api/staticmap?size=200x200&maptype=roadmap{{ getLocation() }}&key=AIzaSyAJv6eAHqmNh5tOHf9KVP-WXIaPehUXNlA" alt="Map">
+  
+</div>

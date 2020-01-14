@@ -9,6 +9,9 @@ import { EventComponent } from './components/event/event.component';
 import {RouterModule, Routes} from '@angular/router';
 import {EventsPage} from './pages/events/events.page';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {EventsService} from './services/events.service';
+import {HttpClientModule} from '@angular/common/http';
+import {EventPage} from './pages/event/event.page';
 
 const routes: Routes = [
   {
@@ -24,6 +27,15 @@ const routes: Routes = [
       id: 'events',
       title: 'Events List'
     }
+  },
+  {
+    path: 'events/:id',
+    component: EventPage,
+    data: {
+      name: 'Event',
+      id: 'event',
+      title: 'Event'
+    }
   }
 ];
 
@@ -35,14 +47,16 @@ const routes: Routes = [
     EventsComponent,
     EventComponent,
     EventsPage,
+    EventPage,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'sr-events' }),
     BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [EventsService],
   bootstrap: [AppLayout]
 })
 export class AppModule { }

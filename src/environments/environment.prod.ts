@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  api: 'https://mock-api.drinks.test.siliconrhino.io'
 };

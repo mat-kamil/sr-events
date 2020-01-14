@@ -1,1 +1,2 @@
-<p>events works!</p>
+<img class="location" *ngIf="markers | async" src="https://maps.googleapis.com/maps/api/staticmap?size=600x200&maptype=roadmap{{ markers | async }}&key=AIzaSyAJv6eAHqmNh5tOHf9KVP-WXIaPehUXNlA" alt="Map">
+<component-event *ngFor="let event of events | async" [event]="event"></component-event>
