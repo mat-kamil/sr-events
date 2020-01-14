@@ -1,0 +1,6 @@
+{
+  "/api/*": {
+    "target": "https://mock-api.drinks.test.siliconrhino.io/",
+    "secure": true
+  }
+}

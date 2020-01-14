@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.layout.html',
+  styleUrls: ['./app.layout.scss']
 })
-export class AppComponent {
+export class AppLayout {
   title = 'sr-events';
 }

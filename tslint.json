@@ -6,7 +6,7 @@
     "deprecation": {
       "severity": "warning"
     },
-    "component-class-suffix": true,
+    "component-class-suffix": [true,"Component","Page","Layout"],
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
     "directive-selector": [
@@ -19,6 +19,8 @@
       true,
       "element",
       "app",
+      "layout",
+      "page",
       "kebab-case"
     ],
     "import-blacklist": [

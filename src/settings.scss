@@ -1,0 +1,30 @@
+$primary: #E5CB90;
+$primaryInvert: #fff;
+
+$secondary: #DBB561;
+$secondaryInvert: #fff;
+
+$tertiary: #5DAB7C;
+$tertiaryInvert: #fff;
+
+$quartenary: #4C3800;
+$quartenaryInvert: #fff;
+
+$quintenary: #BB6B62;
+$quintenaryInvert: #fff;
+
+$success: $tertiary;
+$error: $quintenary;
+
+
+/**
+ * COLOUR PRESETS
+ */
+$header: $secondary;
+$headerText: $secondaryInvert;
+
+$body: $primary;
+$bodyText: $primaryInvert;
+
+$footer: $secondary;
+$footerText: $secondaryInvert;

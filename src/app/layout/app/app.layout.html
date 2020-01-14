@@ -1,0 +1,13 @@
+<div class="app-body">
+  <div class="header">
+    <layout-header></layout-header>
+  </div>
+  <div class="body">
+    <div class="mat-typography body-wrapper" [@routerTransition]="o.activatedRouteData.id">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+  </div>
+  <div class="footer">
+    <layout-footer></layout-footer>
+  </div>
+</div>
