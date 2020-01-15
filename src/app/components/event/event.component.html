@@ -20,7 +20,7 @@
       </p>
       <span class="date">{{event.time | fromNow}}</span>
     </div>
-    <img class="toggle" src="assets/arrow-down.svg" alt="open" (click)="open=!open">
+    <img class="toggle" src="assets/arrow-down.svg" alt="open" [class.open]="open" (click)="open=!open">
   </div>
   <div class="body" [class.open]="open">
     <div class="section">
@@ -35,7 +35,7 @@
       <h2>Who?</h2>
       <component-user *ngFor="let user of event.guests" [user]="user"></component-user>
     </div>
-    <div class="section">
+    <div class="section" *ngIf="event.comments?.length">
       <h2>Comments</h2>
       <component-comment *ngFor="let comment of event.comments" [comment]="comment"></component-comment>
     </div>
