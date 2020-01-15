@@ -4,7 +4,42 @@
      [class.coffees]="event.type==='COFFEES'"
      [class.milkshakes]="event.type==='MILKSHAKES'"
 >
-  <h3>{{event.title}}</h3>
-  <img class="location" src="https://maps.googleapis.com/maps/api/staticmap?size=200x200&maptype=roadmap{{ getLocation() }}&key=AIzaSyAJv6eAHqmNh5tOHf9KVP-WXIaPehUXNlA" alt="Map">
+  <div class="header">
+    <img class="event-icon" src="assets/beer-icon.png" alt="BEER" *ngIf="event.type==='BEERS'">
+    <img class="event-icon"  src="assets/cocktail-icon.png" alt="COCKTAILS" *ngIf="event.type==='COCKTAILS'">
+    <img class="event-icon"  src="assets/coffee-icon.png" alt="COFFEES" *ngIf="event.type==='COFFEES'">
+    <img class="event-icon"  src="assets/milkshake-icon.png" alt="MILKSHAKES" *ngIf="event.type==='MILKSHAKES'">
+    <div class="inner">
+      <h2>{{event.title}}</h2>
+      <p class="short-desc">
+        <span *ngIf="event.type==='BEERS'">Have a beer with </span>
+        <span *ngIf="event.type==='COCKTAILS'">Wind down over cocktails with </span>
+        <span *ngIf="event.type==='COFFEES'">Relax and share over coffee with </span>
+        <span *ngIf="event.type==='MILKSHAKES'">Indulge in milkshakes with </span>
+        <component-user [user]="event.creator"></component-user>
+      </p>
+      <span class="date">{{event.time | fromNow}}</span>
+    </div>
+    <img class="toggle" src="assets/arrow-down.svg" alt="open" (click)="open=!open">
+  </div>
+  <div class="body" [class.open]="open">
+    <div class="section">
+      <h2>Where?</h2>
+      <a class="location" href="https://www.google.com/maps/search/?api=1&query={{event.location.latitude}}, {{event.location.longitude}}" target="_blank">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?size=150x150&maptype=roadmap{{ getLocation() }}&key=AIzaSyAJv6eAHqmNh5tOHf9KVP-WXIaPehUXNlA" alt="Map">
+        <h3>{{event.location.name}}</h3>
+      </a>
+      
+    </div>
+    <div class="section">
+      <h2>Who?</h2>
+      <component-user *ngFor="let user of event.guests" [user]="user"></component-user>
+    </div>
+    <div class="section">
+      <h2>Comments</h2>
+      <component-comment *ngFor="let comment of event.comments" [comment]="comment"></component-comment>
+    </div>
+  </div>
+  
   
 </div>

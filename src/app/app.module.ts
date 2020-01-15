@@ -12,6 +12,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {EventsService} from './services/events.service';
 import {HttpClientModule} from '@angular/common/http';
 import {EventPage} from './pages/event/event.page';
+import { UserComponent } from './components/user/user.component';
+import { CommentComponent } from './components/comment/comment.component';
+import {FromNowPipe} from './pipes/fromNow.pipe';
 
 const routes: Routes = [
   {
@@ -48,6 +51,9 @@ const routes: Routes = [
     EventComponent,
     EventsPage,
     EventPage,
+    UserComponent,
+    CommentComponent,
+    FromNowPipe,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'sr-events' }),

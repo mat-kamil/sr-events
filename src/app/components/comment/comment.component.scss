@@ -1,0 +1,47 @@
+@import "../../../settings";
+
+:host {
+  display: block;
+  background: rgba(255,255,255,0.6);
+  border-radius: 15px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.name {
+  display: inline-block;
+  color: $quintenary;
+}
+
+.date {
+  flex: 0 1 auto;
+  margin-left: auto;
+  color: $fadedText;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.comment {
+  padding: 10px 0 10px 30px;
+  display: block;
+}

@@ -4,5 +4,22 @@
   display: block;
   flex: 0 0 100%;
   padding: 0 20px;
-  width: 100%;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#search {
+  border: 0 solid $secondaryInvert;
+  border-bottom-width: 1px;
+  background: none;
+  padding: 3px 5px;
+  outline: none;
+  color: $secondaryInvert;
+  &::placeholder { color: inherit; }
 }

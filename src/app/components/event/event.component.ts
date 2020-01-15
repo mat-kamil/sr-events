@@ -8,6 +8,7 @@ import {Event} from '../../models/events';
 })
 export class EventComponent {
   @Input() event: Event;
+  open = false;
   constructor() { }
   
   getLocation(){

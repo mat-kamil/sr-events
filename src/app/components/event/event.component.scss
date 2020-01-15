@@ -1,0 +1,97 @@
+@import '../../../settings.scss';
+
+:host {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6,p,span { margin: 0; }
+
+.event {
+  display: block;
+  width: 100%;
+  background: $event;
+  color: $eventText;
+  border-bottom: 1px solid $event;
+  .header { background: $eventHeader; }
+  &.beers {
+    background: $beerBg2;
+    color: $beerText;
+    border-bottom: 1px solid $beerBg2;
+    .header { background: $beerBg; }
+  }
+  &.cocktails {
+    background: $cocktailBg2;
+    color: $cocktailText;
+    border-bottom: 1px solid $cocktailBg2;
+    .header { background: $cocktailBg; }
+  }
+  &.coffees {
+    background: $coffeeBg2;
+    color: $coffeeText;
+    border-bottom: 1px solid $coffeeBg2;
+    .header { background: $coffeeBg; }
+  }
+  &.milkshakes {
+    background: $milkshakeBg2;
+    color: $milkshakeText;
+    border-bottom: 1px solid $milkshakeBg2;
+    .header { background: $milkshakeBg; }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  
+  > .inner { padding-left: 20px; }
+}
+
+.event-icon { width: 50px; flex: 0 1 50px; }
+
+.toggle { 
+  cursor: pointer; 
+  margin-left: auto; 
+  padding: 10px 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  &:hover { background: rgba(255,255,255,0.3); }
+}
+
+.body {
+  display: block;
+  max-height: 0;
+  transition: all 250ms ease-in;
+  overflow: hidden;
+  
+  &.open {
+    max-height: 1000px;
+  }
+}
+
+.section {
+  padding: 20px;
+  h1,h2,h3,h4,h5,h6 { line-height: 1.3; }
+}
+
+.short-desc {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  color: $fadedText;
+}
+
+.date { color: $fadedText; }
+
+.location {
+  display: block;
+  img {
+    width: 150px;
+    height: 150px;
+  }
+  color: inherit;
+}
+

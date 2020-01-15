@@ -1,6 +1,6 @@
 <div class="header-section">
   <h3>List of all events</h3>
-  <input type="text" (input)="onSearchChange($event?.target.value)"/>
+  <input id="search" type="text" (input)="onSearchChange($event?.target.value)" placeholder="Search for an event"/>
 </div>
 <div class="body-section">
   <component-events [searchTermInput]="searchTerm | async"></component-events>

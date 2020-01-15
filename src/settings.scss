@@ -13,6 +13,24 @@ $quartenaryInvert: #fff;
 $quintenary: #BB6B62;
 $quintenaryInvert: #fff;
 
+$fadedText: #858585;
+
+$beerBg: #dbb561;
+$beerBg2: rgb(255, 236, 170);
+$beerText: #8f6d4a;
+
+$cocktailBg: #93e5e1;
+$cocktailBg2: #d8fffa;
+$cocktailText: #4b7d79;
+
+$coffeeBg: #d7ccc8;
+$coffeeBg2: #fff3ee;
+$coffeeText: #6f645f;
+
+$milkshakeBg: #ffdbcb;
+$milkshakeBg2: #ffeae8;
+$milkshakeText: #806860;
+
 /**
  * COLOUR PRESETS
  */
@@ -25,5 +43,6 @@ $bodyText: $primaryInvert;
 $footer: $secondary;
 $footerText: $secondaryInvert;
 
-$success: $tertiary;
-$error: $quintenary;
+$event: #efefef;
+$eventHeader: #ddd;
+$eventText: #333;
